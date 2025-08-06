@@ -10,6 +10,9 @@
 
 body {
   margin: 0;
+  font-family: var(--font-main), sans-serif;
+  font-variation-settings: "wght" 410;
+  font-size: var(--main-font-size);
 }
 
 h1,
@@ -51,3 +54,9 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+dialog {
+  padding: 0;
+  border: none;
+}
+

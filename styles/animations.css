@@ -9,3 +9,94 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+@keyframes heart-growing {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes sparkling {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.sparks {
+  fill: var(--sparks-color);
+  opacity: 0;
+}
+
+.contour {
+  fill: var(--heart-countur);
+  transition: fill 0.1s linear;
+}
+
+.main-body {
+  fill: var(--transparent);
+  transition: fill 0.3s linear;
+}
+
+.core {
+  fill: var(--transparent);
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:has(:hover) {
+  .core {
+    fill: var(--hover-fill);
+    transition: fill 0.3s linear;
+  }
+
+  .main-body {
+    fill: var(--hover-fill);
+    transition: fill 0.3s 0.05s linear;
+  }
+}
+
+.like-icon:has(:active) { 
+  .core {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s linear;
+  }
+
+  .main-body {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s 0.05s linear;
+  }
+}
+
+.like-icon.is-liked {
+  
+  .core {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s linear; 
+  }
+
+  .main-body {
+    fill: var(--animation-fill-color);
+    transition: fill 0.3s 0.05s linear;
+  }
+
+  .contour {
+    fill: var(--heart-is-liked-countur);
+    transition: fill 0.3s 0.06s linear;
+  }
+
+  .heart {
+    transform-origin: center
+    animation: heart-growing 0.3s ease-in 0.1s;
+  }
+
+  .sparks {
+    animation: sparkling 0.3s ease-in 0.3s;
+  }
+}
+

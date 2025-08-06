@@ -13,4 +13,282 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--background);
+  background-size: cover;
+  max-inline-size: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  font-family: "PressStart2P";
+  font-weight: bold;
+  line-height: auto;
+  background-color: #fff;
+  padding: 120px 14px;
+  border: 2px solid #000;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+.header__title {
+  font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.main {
+  margin-block-start: 100px; 
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.card__title {
+  font-size: 18px;
+  font-variation-settings: "wght" 715;
+  padding: 6px 10px;
+  border-block-end: 2px solid #000;
+}
+
+.card__image-wrapper {
+  position: relative;
+  background-color: #000;
+  max-block-size: 696px;
+  overflow: hidden;
+}
+
+.card_image-label {
+  position: absolute;
+  font-family: "PressStart2P", sans-serif;
+  font-size: 14px;
+  top: 25px;
+  right: 25px;
+  text-transform: uppercase;
+  opacity: 50%;
+  text-shadow:
+  -1px 0 #fff, 
+  0 1px #fff, 
+  1px 0 #fff, 
+  0 -1px #fff;
+}
+
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card_image-label {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
+} 
+
+.card__image {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+  aspect-ratio: 1/1;   
+}
+
+.card__content {
+  padding: 20.5px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  line-height: 21px;
+  border-block-start: 2px solid #000; 
+}
+
+.card__content_buttons {
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+  align-items: center;
+}
+
+.button {
+  border: 2px solid #000;
+  font-family: var(--font-accent), sans-serif;
+  font-weight: regular;
+  font-size: 14px;
+  line-height: 90%;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.card__icon-button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  transition: outline 0.3s ease;
+  height: 38px;
+  width: 33px;
+  
+}
+
+.card__like-button {
+  padding: 10.5px 35px;
+}
+
+.download_wrapper {
+  padding: 50px 34.5px 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.download__button {
+  padding: 15px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.dialog {
+  display: grid;
+  border: 2px solid #000;
+  padding: 28px 40px; 
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2. 1fr);
+  max-inline-size: 341px;
+  gap: 30px 20px;
+  align-items: center;
+}
+
+.dialog_image {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.dialog_title {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  font-family: "PressStart2P", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog_button {
+  grid-row: 2 / 3;
+  grid-column: 1 / span 2;
+  text-transform: uppercase;
+  padding: 12.5px 0px;
+}
+
+#download::backdrop {
+  background-color: #000;
+  opacity: 0.75;
+}
+
+.grayscale {
+  filter: grayscale(0.8) brightness(1.4);
+}
+
+.saturated {
+  filter: saturate(250%);
+}
+
+.brightsepia {
+  filter: saturate(250%) sepia(0.7) contrast(1.5);
+}
+
+.inverted {
+  filter: invert(1) contrast(0.5);
+}
+
+.classic-sepia {
+  filter: sepia(1);
+}
+
+.blured {
+  filter: blur(20px);
+}
+
+.card__image-wrapper:has(.blured) {
+  overflow: hidden;
+}
+
+.hue_rotation {
+  filter: hue-rotate(90deg) contrast(0.5) blur(3px) saturate(1.5);
+}
+
+.button:focus {
+  outline: none;
+} 
+
+.button:focus-visible {
+  box-shadow: 2px 2px #000;
+}
+
+.button::after {
+  position:absolute;
+  content: "";
+  background-color: #000;
+  inset: 0;
+  scale: 0 1;
+  transition: 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.button:hover::after {
+  scale: 1 1;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  background-color: #000;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid black;
+}
+
+
+
+@media (width >= 1440px) {
+  .header {
+    padding: 128px 120.5px;
+  }
+
+  .main {
+    margin-block-start: 98px;
+  }
+
+  .download__button {
+    flex-direction: row;
+    padding: 11px 15.5px;
+  }
+
+  .dialog {
+    padding: 28px 30px;
+    min-inline-size: 353px;
+  }
+
+  .card__content {
+    padding: 22.5px 25px;
+  }
 }
