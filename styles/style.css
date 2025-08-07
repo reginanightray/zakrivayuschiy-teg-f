@@ -93,6 +93,8 @@
   inline-size: 100%;
   block-size: 100%;
   aspect-ratio: 1/1;
+  max-block-size: 696px;
+  max-inline-size: 696px;
 }
 
 .card__content {
