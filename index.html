@@ -34,7 +34,9 @@
                 <p class="card__content_paragraph">Место для ваших воспоминаний о начале обучения.</p>
                 <div class="card__content_buttons">
                   <button class="card__icon-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class="like-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="39"
+                        height="36"
+                        viewBox="0 0 39 36" fill="none" class="like-icon">
                       <g class="heart">
                         <path class="contour" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
                         <path class="main-body" d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z"/>
@@ -270,14 +272,22 @@
         </ul>
         <div class="download_wrapper">
           <button type="button" class="download__button button" onclick="window['download'].showModal();" aria-controls="download">
-            <img src="./svg/floppy.jpg" width="28px" height="28px" class="download_button-image">
+            <div class="floppy">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+              <use href="./svg/floppy.svg#floppy" />
+            </svg>
+          </div>
             <span class="button__text">Сохранить на память</span>
           </button>
           <dialog id="download">
             <div class="dialog">
-              <img src="./svg/floppy.jpg" width="28px" height="28px" class="dialog_image">
+              <div class="floppy">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+                    <use href="./svg/floppy.svg#floppy" />
+                </svg>
+              </div>
               <h2 class="dialog_title">Вставьте дискету, чтобы продолжить</h2>
-              <button type="button" onclick="window['download'].close()" class="dialog_button button">ok</button>
+              <button type="button" onclick="window['download'].close()" class="dialog_button button"><span class="button__text">ok<span></button>
             </div>
         </dialog>
         </div>

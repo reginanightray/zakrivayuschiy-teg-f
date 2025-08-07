@@ -12,4 +12,6 @@
   --animation-fill-color: red;
   --sparks-color: red; 
   --hover-fill: #000;
+  --button-content: #fff;
+  --button-bg-color: #fff;
 }
