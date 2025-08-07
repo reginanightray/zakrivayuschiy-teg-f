@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
     <link rel="icon" href="./images/favicon.ico" sizes="any">
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./images/mobile-icon.png">
@@ -272,11 +272,11 @@
         </ul>
         <div class="download_wrapper">
           <button type="button" class="download__button button" onclick="window['download'].showModal();" aria-controls="download">
-            <div class="floppy">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
-              <use href="./svg/floppy.svg#floppy" />
-            </svg>
-          </div>
+            <span class="floppy">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+                <use href="./svg/floppy.svg#floppy" />
+              </svg>
+            </span>
             <span class="button__text">Сохранить на память</span>
           </button>
           <dialog id="download">
@@ -287,7 +287,7 @@
                 </svg>
               </div>
               <h2 class="dialog_title">Вставьте дискету, чтобы продолжить</h2>
-              <button type="button" onclick="window['download'].close()" class="dialog_button button"><span class="button__text">ok<span></button>
+              <button type="button" onclick="window['download'].close()" class="dialog_button button"><span class="button__text">ok</span></button>
             </div>
         </dialog>
         </div>

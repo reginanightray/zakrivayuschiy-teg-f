@@ -49,54 +49,48 @@
   transition: fill 0.3s 0.03s linear;
 }
 
-.like-icon:has(:hover) {
-  .core {
-    fill: var(--hover-fill);
+.like-icon:has(:hover) .core {
+  fill: var(--hover-fill);
     transition: fill 0.3s linear;
-  }
+}
 
-  .main-body {
+.like-icon:has(:hover) .main-body {
     fill: var(--hover-fill);
     transition: fill 0.3s 0.05s linear;
   }
-}
 
-.like-icon:has(:active) { 
-  .core {
-    fill: var(--animation-fill-color);
+.like-icon:has(:active) .core {
+  fill: var(--animation-fill-color);
     transition: fill 0.3s linear;
-  }
-
-  .main-body {
-    fill: var(--animation-fill-color);
-    transition: fill 0.3s 0.05s linear;
-  }
 }
 
-.like-icon.is-liked {
-  
-  .core {
-    fill: var(--animation-fill-color);
+.like-icon:has(:active) .main-body {
+  fill: var(--animation-fill-color);
+    transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
     transition: fill 0.3s linear; 
-  }
-
-  .main-body {
-    fill: var(--animation-fill-color);
-    transition: fill 0.3s 0.05s linear;
-  }
-
-  .contour {
-    fill: var(--heart-is-liked-countur);
-    transition: fill 0.3s 0.06s linear;
-  }
-
-  .heart {
-    transform-origin: center
-    animation: heart-growing 0.3s ease-in 0.1s;
-  }
-
-  .sparks {
-    animation: sparkling 0.3s ease-in 0.3s;
-  }
 }
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+    transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-is-liked-countur);
+    transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+    animation: heart-growing 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparkling 0.3s ease-in 0.3s;
+}
+
 
