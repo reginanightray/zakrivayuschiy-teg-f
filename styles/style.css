@@ -14,6 +14,7 @@
   margin: 0 auto;
   background-image: var(--background);
   background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   max-inline-size: 700px;
